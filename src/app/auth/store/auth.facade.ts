@@ -8,8 +8,8 @@ import * as fromAuth from "./auth.selector"
   providedIn: "root"
 })
 export class AuthFacade {
-  readonly isLoading$ = this.store.pipe(select(fromAuth.isLoadingSelector));
-  readonly user$ = this.store.pipe(select(fromAuth.userSelector));
+  readonly isLoading$ = this.store.pipe(select(fromAuth.isLoading));
+  readonly user$ = this.store.pipe(select(fromAuth.selectUser))
 
   constructor(private store: Store<AuthState>) {
   }

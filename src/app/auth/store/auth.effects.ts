@@ -21,7 +21,7 @@ export class AuthEffects {
   loginSuccess$ = createEffect(
     () => this.actions$.pipe(
       ofType(AuthActions.loginSuccess),
-      tap(() => this.router.navigateByUrl("/"))
+      tap(() => this.router.navigateByUrl("/user"))
     ),
     {dispatch: false}
   )
